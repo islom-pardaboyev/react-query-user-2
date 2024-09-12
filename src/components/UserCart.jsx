@@ -38,9 +38,6 @@ function UserCart({ user, deleteUser,  }) {
         <Button className="!bg-green-500 !text-white" onClick={() => handleEdit(id)}>
           <FaEdit />
         </Button>
-        <Button className="!bg-sky-500 !text-white">
-          <IoIosMore />
-        </Button>
       </div>
     </div>
   );

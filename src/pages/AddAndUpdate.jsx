@@ -99,7 +99,6 @@ function AddAndUpdate() {
         className="min-w-[80vw] grid grid-cols-12 gap-6"
       >
         <div className="col-span-6 flex flex-col gap-5">
-          {/* Name Field */}
           <label className="flex flex-col">
             <span>Name</span>
             <Input
@@ -120,7 +119,6 @@ function AddAndUpdate() {
             )}
           </label>
 
-          {/* Country Field */}
           <label className="flex flex-col">
             <span>Country</span>
             <Select
@@ -142,7 +140,6 @@ function AddAndUpdate() {
             )}
           </label>
 
-          {/* Age Field */}
           <label className="flex flex-col">
             <span>Age</span>
             <Select
@@ -159,7 +156,6 @@ function AddAndUpdate() {
             )}
           </label>
 
-          {/* Email Field */}
           <label className="flex flex-col">
             <span>Email</span>
             <Input
@@ -175,7 +171,6 @@ function AddAndUpdate() {
             )}
           </label>
 
-          {/* Status Field */}
           <label className="flex flex-col">
             <span>Status</span>
             <Select
@@ -196,7 +191,6 @@ function AddAndUpdate() {
           </label>
         </div>
 
-        {/* Description Field */}
         <div className="col-span-6">
           <label>
             <span>Description</span>
@@ -215,7 +209,6 @@ function AddAndUpdate() {
           </label>
         </div>
 
-        {/* Submit Button */}
         <div className="col-span-12 flex justify-end">
           <Button
             size="large"
