@@ -5,7 +5,7 @@ import React from "react";
 import { addUserSchema } from "../schemas";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ref } from "yup";
 
 export const countriesArray = [
@@ -29,12 +29,13 @@ const ageArray = [
   { value: 20, label: "20" },
 ];
 
-const statusArray = [
-  { value: "active", label: "Active" },
-  { value: "inactive", label: "Inactive" },
+export const statusArray = [
+  { value: "active", label: "Active", id: 1 },
+  { value: "inactive", label: "Inactive", id: 2 },
 ];
 
 function AddAndUpdate() {
+  
   const navigate = useNavigate();
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
@@ -42,12 +43,12 @@ function AddAndUpdate() {
       const response = await axios.get("http://localhost:3000/users");
       return response.data;
     },
-  })
+  });
   const { mutate: addUser } = useMutation({
     mutationFn: (body) => axios.post("http://localhost:3000/users", body),
     onSuccess: () => {
-      refetch()
-    }
+      refetch();
+    },
   });
   const formik = useFormik({
     initialValues: {
@@ -57,6 +58,7 @@ function AddAndUpdate() {
       email: "",
       status: "",
       description: "",
+      statusId: ""
     },
     validationSchema: addUserSchema,
     onSubmit: (values, actions) => {
@@ -67,8 +69,11 @@ function AddAndUpdate() {
         age: values.age,
         status: values.status,
         description: values.description,
+        statusId: values.statusId
       };
       addUser(data);
+      console.log(data);
+      
       actions.resetForm();
       navigate("/");
     },
@@ -109,7 +114,9 @@ function AddAndUpdate() {
             <Select
               showSearch
               onBlur={formik.handleBlur}
-              onChange={(value, option) => formik.setFieldValue("country", option.label)}
+              onChange={(value, option) =>
+                formik.setFieldValue("country", option.label)
+              }
               size="large"
               className={`${
                 formik.errors.country &&
@@ -129,7 +136,9 @@ function AddAndUpdate() {
             <Select
               showSearch
               onBlur={formik.handleBlur}
-              onChange={(value, option) => formik.setFieldValue("age", option.label)}
+              onChange={(value, option) => {
+                formik.setFieldValue("age", option.label);
+              }}
               size="large"
               className="w-full"
               placeholder="Select age"
@@ -160,7 +169,10 @@ function AddAndUpdate() {
             <Select
               showSearch
               onBlur={formik.handleBlur}
-              onChange={(value, option) => formik.setFieldValue("status", option.label)}
+              onChange={(value, option) => {
+                formik.setFieldValue("status", option.label);
+                formik.setFieldValue("statusId", option.id);
+              }}
               size="large"
               className="w-full"
               placeholder="Select status"

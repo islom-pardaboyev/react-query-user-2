@@ -9,4 +9,5 @@ export const addUserSchema = yup.object().shape({
     age: yup.string().required("Required"),
     status: yup.string().required("Required"),
     description: yup.string().required("Required").min(10, "Must be 10 characters or more"),
+    statusId: yup.number().required("Required")
 })

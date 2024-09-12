@@ -1,31 +1,14 @@
 {
   "users": [
     {
-      "id": "55c5",
-      "name": "Islom",
-      "email": "makhmuddfas@gmail.vom",
-      "country": "Canada",
-      "age": "20",
-      "status": "Inactive",
-      "description": "wgsdhsdfhsdfgsdfgsdfgsdf"
-    },
-    {
-      "id": "2c24",
-      "name": "API Clone by Islom",
-      "email": "makhmuddfas@gmail.com",
-      "country": "Canada",
-      "age": "20",
-      "status": "Active",
-      "description": "wgs"
-    },
-    {
-      "id": "66d1",
-      "name": "Olim Allaqulov",
-      "email": "ipardaboyev574@gmail.com",
-      "country": "Uzbekistan",
+      "id": "3d30",
+      "name": "Islom Pardaboyev",
+      "email": "ipardaboyevdev@gmail.com",
+      "country": "United States",
       "age": "19",
-      "status": "Active",
-      "description": "asjgaf hrgjkfdgasdgqisdvbairaergaosughsuditwhei rertr g y tyrt eeye\n"
+      "status": "Inactive",
+      "description": "asfhdfhmsgxc",
+      "statusId": 2
     }
   ]
 }
