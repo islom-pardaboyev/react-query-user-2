@@ -1,14 +1,24 @@
 {
   "users": [
     {
-      "id": "3d30",
-      "name": "Islom Pardaboyev",
-      "email": "ipardaboyevdev@gmail.com",
-      "country": "United States",
-      "age": "19",
-      "status": "Inactive",
-      "description": "asfhdfhmsgxc",
-      "statusId": 2
+      "name": "Olim Allaqulov",
+      "email": "olimallaqulov@gmail.com",
+      "country": "Uzbekistan",
+      "age": 18,
+      "status": "inactive",
+      "description": "bolla nima gapppsdf\n",
+      "statusId": 2,
+      "id": "3d30"
+    },
+    {
+      "name": "YouTube Downloader",
+      "email": "ipardaboyevdev574@gmail.com",
+      "country": "Canada",
+      "age": 19,
+      "status": "active",
+      "description": "asgafshsjsdnsfghshs",
+      "statusId": 1,
+      "id": "55f4"
     }
   ]
 }
